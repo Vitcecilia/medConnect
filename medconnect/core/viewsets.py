@@ -2,7 +2,8 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from hospital import models, serializers, filters
+from core import models, serializers, filters
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = models.User.objects.all()

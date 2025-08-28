@@ -1,6 +1,6 @@
 from rest_framework import routers
 
-from hospital import viewsets
+from core import viewsets
 
 router = routers.DefaultRouter()
 
