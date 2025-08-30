@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from hospital import models
+from core import models
 
 
 class UserSerializer(serializers.ModelSerializer):
