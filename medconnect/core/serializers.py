@@ -1,64 +1,69 @@
 from rest_framework import serializers
 
-from core import models
+from hospital import models
 
 
-class UserSerializers(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.User
         fields = '__all__'
 
-class TelephoneSerializers(serializers.ModelSerializer):
+
+class TelephoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Telephone
         fields = '__all__'
 
-class AddressSerializers(serializers.ModelSerializer):
+
+class AddressSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.Address
         fields = '__all__'
 
-class HealthInsuranceSerializers(serializers.ModelSerializer):
+
+class HealthInsuranceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.HealthInsurance
         fields = '__all__'
 
-class Blood_TypeSerializers(serializers.ModelSerializer):
+
+class PatientSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.Patient
         fields = '__all__'
 
-class PatientSerializers(serializers.ModelSerializer):
+
+class PatientHealthInsuranceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.PatientHealthInsurance
         fields = '__all__'
 
-class PatientHealthInsuranceSerializers(serializers.ModelSerializer):
+
+class MedicSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.Medic
         fields = '__all__'
 
-class MedicSerializers(serializers.ModelSerializer):
-            class Meta:
-                model = models.Telephone
-                fields = '__all__'
 
-class SpecializationSerializers(serializers.ModelSerializer):
+class SpecializationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.Specialization
         fields = '__all__'
 
-class ConsultationSerializers(serializers.ModelSerializer):
+
+class ConsultationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.Consultation
         fields = '__all__'
 
-class MedicationSerializers(serializers.ModelSerializer):
+
+class MedicationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.Medication
         fields = '__all__'
 
-class MedicationConsultationSerializers(serializers.ModelSerializer):
+
+class MedicationConsultationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Telephone
+        model = models.MedicationConsultation
         fields = '__all__'
